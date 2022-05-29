@@ -1,7 +1,7 @@
 ﻿
 namespace ScreenToGif
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -37,9 +37,9 @@ namespace ScreenToGif
             // start_button
             // 
             this.start_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_button.Location = new System.Drawing.Point(245, 68);
+            this.start_button.Location = new System.Drawing.Point(150, 68);
             this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(211, 123);
+            this.start_button.Size = new System.Drawing.Size(446, 123);
             this.start_button.TabIndex = 0;
             this.start_button.Text = "Start";
             this.start_button.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace ScreenToGif
             this.label1.TabIndex = 2;
             this.label1.Text = "Save to:";
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,7 +71,7 @@ namespace ScreenToGif
             this.Controls.Add(this.label1);
             this.Controls.Add(this.directory_text_box);
             this.Controls.Add(this.start_button);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Screen To Gif";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
