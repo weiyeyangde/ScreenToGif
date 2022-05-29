@@ -36,13 +36,14 @@ namespace ScreenToGif
             // 
             // start_button
             // 
-            this.start_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start_button.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_button.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_button.Location = new System.Drawing.Point(150, 68);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(446, 123);
             this.start_button.TabIndex = 0;
-            this.start_button.Text = "Start";
-            this.start_button.UseVisualStyleBackColor = true;
+            this.start_button.Text = "Start Recording";
+            this.start_button.UseVisualStyleBackColor = false;
             this.start_button.Click += new System.EventHandler(this.Button_Click);
             // 
             // directory_text_box
@@ -57,11 +58,11 @@ namespace ScreenToGif
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 261);
+            this.label1.Location = new System.Drawing.Point(34, 258);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 25);
+            this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Save to:";
+            this.label1.Text = "Save gif to:";
             // 
             // Main
             // 
@@ -72,7 +73,7 @@ namespace ScreenToGif
             this.Controls.Add(this.directory_text_box);
             this.Controls.Add(this.start_button);
             this.Name = "Main";
-            this.Text = "Screen To Gif";
+            this.Text = "ScreenToGif";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

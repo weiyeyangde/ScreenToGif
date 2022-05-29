@@ -14,8 +14,8 @@ namespace ScreenToGif
 {
     public partial class Main : Form
     {
-        private const string ButtonTextStart = "Start";
-        private const string ButtonTextStop = "Stop";
+        private const string ButtonTextStart = "Start Recording";
+        private const string ButtonTextStop = "Stop Recording";
 
         private readonly string DefaultResultSavePath;
 
@@ -68,9 +68,9 @@ namespace ScreenToGif
         private void SetTimer()
         {   
             screenshotTimer = new System.Timers.Timer(100);
+            screenshotTimer.Elapsed += CaptureScreen;               
             screenshotTimer.AutoReset = true;
             screenshotTimer.Enabled = true;
-            screenshotTimer.Elapsed += CaptureScreen;               
         }
 
         private void CaptureScreen(Object source, ElapsedEventArgs e)
@@ -91,6 +91,12 @@ namespace ScreenToGif
 
         private void CreateAnimatedGif()
         {
+            if (images.Count == 0)
+            {
+                // If no screenshot taken, just return
+                return;
+            }
+
             using (MagickImageCollection collection = new MagickImageCollection())
             {
                 collection.AddRange(images);

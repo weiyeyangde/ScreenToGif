@@ -1,2 +1,2 @@
 ## ScreenToGif
-Make Animated GIFs from a Screen Recording.
+Create Animated GIFs from a Screen Recording.
